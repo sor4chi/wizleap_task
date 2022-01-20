@@ -1,0 +1,43 @@
+version: '3'
+
+services:
+  mysql:
+    container_name: laravel_beginner_mysql
+    image: mysql:8.0
+    platform: linux/x86_64
+    restart: always
+    ports:
+      - "33003:3306"
+    volumes:
+      - "./resources/secrets/mysql/mysql:/var/lib/mysql"
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: test
+      MYSQL_USER: test
+      MYSQL_PASSWORD: password
+
+  php7:
+    container_name: laravel_beginner_php7
+    build: "./resources/secrets/laravel"
+    restart: always
+    volumes:
+      - .:/var/www/project
+    links:
+      - mysql
+    working_dir: /var/www/project
+    environment:
+      APP_ENV: ${APP_ENV}
+#    links:
+#      - node
+
+  nginx:
+    container_name: laravel_beginner_nginx
+    image: nginx:1.15
+    volumes:
+      - ./resources/secrets/nginx/conf.d:/etc/nginx/conf.d
+      - ./public:/var/www/project/public
+    restart: always
+    ports:
+      - "8083:80"
+    links:
+      - php7

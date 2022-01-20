@@ -1,0 +1,419 @@
+body{
+  margin-top: 0;
+  margin-right: 0;
+  margin-left : 0; 
+  margin-top: 10px;
+  font-size: 14px;
+  Yu Gothic,YuGothic,YuMincho,Hiragino Kaku Gothic ProN,Lucida Grande,ヒラギノ角ゴ ProN W3,Meiryo,メイリオ,sans-serif;
+  color: #333;
+  letter-spacing: 1px;
+  }
+
+  /* header下の下線 */
+.common_header{
+  padding-bottom: 10px;
+  border-style: groove;
+  border-color: #EEEEEE;
+  border-top: white;
+  border-left: white;
+  border-right: white;
+  border-width: 2px;
+}
+
+.wizleap_header{
+  width: 1000px;
+  margin-right: auto;
+  margin-left : auto;
+  padding-top: 0px ;
+  padding-bottom: 70px ;
+  margin-top: 0;
+}
+
+.icon{
+  float: left;
+  padding-top: 5px;
+  margin-top: 20px;
+}
+
+.searchHome{
+  float: right;
+  padding-right: 30px;
+  position:relative;
+  top: 5px;
+  margin-bottom: 15px;
+  margin-left: auto;
+}
+#searchBox{
+  font-family: inherit;
+  line-height: inherit;
+  width: 300px;
+  margin-top: 10px;
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 4px 0 0 4px;
+  font-size: 12px;
+  background-color: #f8f8f8;
+  border: solid 1px #e3e3e3;
+  position: relative;
+  right: 60px;
+}
+
+/* 検索ボタンの調整 */
+#searchBtn{
+  margin-top: 10px;
+  width:40px; 
+  height:40px;
+  position: absolute;
+  right: 50px;
+  top: 0;
+  border-radius: 4px;
+  background-color: tomato;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.all_contents{
+  width: 1000px;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left : auto;
+  
+}
+
+.all_contents ul{
+  /* ・を無くす */
+  list-style: none;
+  padding-left: 10px;
+  padding-right: 0;
+}
+
+
+.contents{
+  float: left;
+  /* headerとの間にスペースを作る */
+  padding-bottom: 10px;
+  width: 650px;
+  /* 文字を折り返す */
+  word-wrap: break-word;
+  
+}
+
+/* <h2>「記事一覧」の１ページ目</h2>の編集 */
+.article_top{
+  font-size: 10px;
+  border-left-width: 6px;
+  border-left-style: solid;
+  border-left-color: tomato;
+}
+
+.article_list{
+  width: 630px;
+  font-size: 14px;
+}
+
+/* 画像と記事のタイトルを横並びにする */
+.all_contents section{
+  display: flex;
+  padding-top: 10px;
+  /* すべての記事に下線を引く */
+  border-style: solid;
+  border-color: #EEEEEE;
+  border-top: white;
+  border-left: white;
+  border-right: white;
+  border-width: 0.5px;
+}
+
+/* 記事の幅の調整 */
+.contents section{
+  height: 80px;
+  width: 630px;
+}
+
+/* 記事のタイトルと画像の間にスペースを作る */
+.info{
+  padding-left: 10px;
+}
+
+.category{
+    width: 800px;
+    padding-left: 10px;
+}
+
+/* 左上のカテゴリーの調整 */
+.category_detail{
+  font-size: 13px;
+  float: left;
+  /* 左上に表示 */
+  vertical-align: top;
+  margin: 0;
+  background-color: orange;
+  color: white;
+  border-radius: 4px;
+}
+
+/* 右上に表示される日付の調整 */
+.category_date{
+  font-size: 3px;
+  float: right;
+  vertical-align: top;
+}
+.article{
+  /* 回りこみ防止 */
+  clear: both;
+  display: flex;
+  align-items: center;
+  width: 500px;
+}
+
+
+
+/* イメージ画像に対してサイズなどの調整 */
+.pic img{
+  width: 70px;
+}
+
+.pic_side img{
+  width: 50px;
+  position: relative;
+
+}
+
+/* 下のページ送りの設定 */
+.contents_number ul{
+  width: 500px;
+  float: left;
+  /* 回りこみ防止 */
+  clear: both;
+  margin: 0 0 10px;
+	padding: 10px 10px 5px;
+	text-align: center;
+}
+
+
+/* ページ送りを横並びにする */
+.contents_number li {
+	display: inline;
+	margin: 0 2px;
+	padding: 0;
+}
+
+/* ページ送りを箱で囲う */
+.contents_number li a {
+	display: inline-block;
+	margin-bottom: 5px;
+  padding: 1px 8px;
+  color: #333333;
+	background: #FFF9F6;
+	border: 1px solid #aaa;
+	text-decoration: none;
+	vertical-align: middle;
+}
+
+/* ページ送りにカーソルを当てた時に変える */
+.contents_number li a:hover {
+	background: #eeeff7;
+	border-color: #00f;
+}
+
+
+.sideBox{
+  float: right;
+  width: 330px;
+  /* 文字を折り返す */
+  word-wrap: break-word;
+  padding-right: 20px;
+  font-size: 10px;
+  z-index: 1;
+  
+}
+
+/* サイドボックスにランキングを表示せる */
+  .sideBox_ranking {
+    counter-reset: wpp-ranking;
+  }
+  
+  .sideBox_ranking li{
+    list-style-type: none;
+    padding: 5px 0 0 0;
+    position: relative;
+  }
+  
+  .sideBox_ranking li::before {
+    background: #999;
+    border-radius: 4px;
+    content: counter(wpp-ranking, decimal);
+    counter-increment: wpp-ranking;
+    color: #fff;
+    font-size: 5px;
+    line-height: 1;
+    padding: 4px 6px;
+    position: absolute;
+    top:15px;
+    left: 1px;
+    /* 前に表示させる */
+    z-index: 2;
+  }
+
+  .sideBox_ranking li:nth-child(1):before {
+    background: #fa0;
+  }
+  .sideBox_ranking li:nth-child(2):before {
+    background: #bbb;
+  }
+  .sideBox_ranking li:nth-child(3):before {
+    background: #930;
+  }
+
+.sideBox_ranking_top{
+    margin-right: 20px;
+    padding-left: 10px;
+    font-size: 24px;
+    /* タイトルの左にあるオレンジの棒の調整  */
+    border-left-width: 4px;
+    border-left-style: solid;
+    border-left-color: tomato;
+}
+
+.sideBox_newest{
+  padding-top: 20px;
+}
+
+.sideBox_newest_second{
+  padding-left: 10px;
+  font-size: 24px;
+  /* タイトルの左にあるオレンジの棒の調整  */
+  border-left-width: 4px;
+  border-left-style: solid;
+  border-left-color: tomato;
+}
+
+footer{
+  /* 回りこみ防止 */
+  clear: both;
+  margin-left: 0;
+}
+
+.wizleap_footer{
+  background-color: rgba(233, 85, 6, 0.2);
+  padding: 55px 0 43px ;
+  padding-bottom: 550px ;
+}
+
+.wizleap_footer0{
+  width: 1200px;
+  margin-right: auto;
+  margin-left : auto;
+}
+
+.wizleap_footer h2{
+  font-size: 14px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px #555;
+}
+
+.wizleap_footer ul{
+  /* ・を無くす */
+  list-style: none;
+}
+
+.wizleap_footer1{
+  float: left;
+  margin: 0 0 18px;
+  width: 380px;
+  height: 300px;
+}
+
+.seimei_hoken{
+  font-size: 15px ;
+  margin-bottom: 5px;
+}
+
+/* 生命保険 */
+/* inline-blockを使用して横並び可能にする */
+.hoken_1{
+  margin-top: 0;
+  margin-bottom: 4px;
+  display: inline-block;  
+  border-right: solid black;
+  padding-right: 2px;
+  border-width: 1px;
+}
+
+.wizleap_footer2{
+  float: left;
+  width: 340px;
+  padding-right: 30px;
+}
+
+.wizleap_footer3{
+  float: left;
+  border-left: solid #333;
+  border-width: 1px;
+  padding-left: 20px;
+}
+
+.dairiten{
+  font-size: 14px;
+  margin-bottom: 0;
+  /* 株式会社Wizleapの上にくるように調整 */
+  padding-left: 28px;
+  
+}
+
+.wizleap_footer3_companyinfo{
+  padding-left: 40px;
+}
+
+.companyName{
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.dairitenName{
+  margin-top: 0;
+  padding-left: 28px;
+}
+
+.TELL, .MAIL{
+  margin: 3px;
+  padding-left: 10px;
+}
+
+.MAIL{
+  padding-bottom: 30px;
+}
+
+/* メールの下線消す */
+a{ 
+  color: #333;
+  text-decoration: none;
+
+}
+
+/* メールの上にカーソルを置いた際に色を変える */
+a:hover{
+  text-decoration: underline;
+}
+
+.SNS img{
+  padding-left: 10px;
+
+}
+
+.wizleap_footer_copyright{
+  clear: both;
+  text-align: center;
+  font-size: 10px;
+  color: gray;
+  padding: 12px 0 8px;
+} 
+
+#copyright_footer{
+  margin-bottom: 10px;
+}  
